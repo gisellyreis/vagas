@@ -1,3 +1,76 @@
+# Documentação básica para a API
+
+### createUser(req, res, next)
+Cria um novo usuário com base nos dados fornecidos no corpo da requisição.
+
+- **Requisição HTTP**: POST
+- **Endpoint**: /users/create
+- **Parâmetros de entrada**:
+  - `name` (string): Nome do usuário.
+  - `job` (string): Cargo do usuário.
+- **Parâmetros de saída**:
+  - `id` (number): ID do usuário criado.
+  - `name` (string): Nome do usuário criado.
+  - `job` (string): Cargo do usuário criado.
+
+### removeUser(req, res, next)
+Remove um usuário com base no nome fornecido na consulta.
+
+- **Requisição HTTP**: DELETE
+- **Endpoint**: /users/remove
+- **Parâmetros de entrada**:
+  - `name` (string): Nome do usuário a ser removido.
+- **Parâmetros de saída**:
+  - `message` (string): Mensagem de confirmação de remoção do usuário.
+
+### updateUser(req, res, next)
+Atualiza os dados de um usuário com base no ID fornecido na consulta.
+
+- **Requisição HTTP**: PUT
+- **Endpoint**: /users/update
+- **Parâmetros de entrada**:
+  - `id` (number): ID do usuário a ser atualizado.
+  - `name` (string): Novo nome do usuário.
+  - `job` (string): Novo cargo do usuário.
+- **Parâmetros de saída**:
+  - `id` (number): ID do usuário atualizado.
+  - `name` (string): Nome do usuário atualizado.
+  - `job` (string): Cargo do usuário atualizado.
+
+### getUser(req, res, next)
+Recupera os dados de um usuário com base no nome fornecido na consulta. Também mantém o controle de quantas vezes o usuário foi acessado.
+
+- **Requisição HTTP**: GET
+- **Endpoint**: /users/get
+- **Parâmetros de entrada**:
+  - `name` (string): Nome do usuário a ser recuperado.
+- **Parâmetros de saída**:
+  - `id` (number): ID do usuário.
+  - `name` (string): Nome do usuário.
+  - `job` (string): Cargo do usuário.
+  - `readed` (number): Quantidade de vezes que o usuário foi acessado.
+
+### getUserReadCount(username)
+Retorna a quantidade de vezes que um determinado usuário foi acessado.
+
+- **Parâmetros de entrada**:
+  - `username` (string): Nome do usuário.
+- **Parâmetros de saída**:
+  - `readCount` (number): Quantidade de vezes que o usuário foi acessado.
+
+## Middleware
+
+### checkPermissions(requiredPermissions)
+Middleware para validar as permissões do usuário com base no token de autenticação.
+
+- **Parâmetros de entrada**:
+  - `role` (string): Cargo/Tipo do usuário logado. Define se o usuário logado possui permissão de "admin" para executar operações críticas.
+- **Parâmetros de saída**: N/A
+
+Espero que esta documentação seja útil para entender e utilizar as funções que foram criadas.
+
+---
+
 # Este é um teste para desenvolvedores
 
 # possui 5 testes
