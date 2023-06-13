@@ -4,7 +4,7 @@
 Cria um novo usuário com base nos dados fornecidos no corpo da requisição.
 
 - **Requisição HTTP**: POST
-- **Endpoint**: /users/create
+- **Endpoint**: /users
 - **Parâmetros de entrada**:
   - `name` (string): Nome do usuário.
   - `job` (string): Cargo do usuário.
@@ -17,7 +17,7 @@ Cria um novo usuário com base nos dados fornecidos no corpo da requisição.
 Remove um usuário com base no nome fornecido na consulta.
 
 - **Requisição HTTP**: DELETE
-- **Endpoint**: /users/remove
+- **Endpoint**: /users
 - **Parâmetros de entrada**:
   - `name` (string): Nome do usuário a ser removido.
 - **Parâmetros de saída**:
@@ -27,7 +27,7 @@ Remove um usuário com base no nome fornecido na consulta.
 Atualiza os dados de um usuário com base no ID fornecido na consulta.
 
 - **Requisição HTTP**: PUT
-- **Endpoint**: /users/update
+- **Endpoint**: /users
 - **Parâmetros de entrada**:
   - `id` (number): ID do usuário a ser atualizado.
   - `name` (string): Novo nome do usuário.
@@ -41,7 +41,7 @@ Atualiza os dados de um usuário com base no ID fornecido na consulta.
 Recupera os dados de um usuário com base no nome fornecido na consulta. Também mantém o controle de quantas vezes o usuário foi acessado.
 
 - **Requisição HTTP**: GET
-- **Endpoint**: /users/get
+- **Endpoint**: /users
 - **Parâmetros de entrada**:
   - `name` (string): Nome do usuário a ser recuperado.
 - **Parâmetros de saída**:
