@@ -12,6 +12,7 @@ const createUser = (req, res, next) => {
     id: data.length + 1,
     name: name,
     job: job,
+    readed: 0,
   };
 
   data.push(newUser);

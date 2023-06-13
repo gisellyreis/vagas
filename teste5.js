@@ -1,6 +1,6 @@
 const data = require("./fakeData");
 
-const consultReadedUser = (req, res, next) => {
+const getUserReadCount = (req, res, next) => {
     const name =  req.query.name;
     const user = data.find((user) => user.name === name);
 
@@ -14,5 +14,5 @@ const consultReadedUser = (req, res, next) => {
 };
 
 module.exports = {
-  consultReadedUser
+  getUserReadCount
 };
