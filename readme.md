@@ -67,7 +67,6 @@ Middleware para validar as permissões do usuário com base no token de autentic
   - `role` (string): Cargo/Tipo do usuário logado. Define se o usuário logado possui permissão de "admin" para executar operações críticas.
 - **Parâmetros de saída**: N/A
 
-Espero que esta documentação seja útil para entender e utilizar as funções que foram criadas.
 
 ---
 
